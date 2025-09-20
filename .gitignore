@@ -1,6 +1,4 @@
-# Python
-__pycache__/
-*.pyc
 .env
-.venv
-venv/
+.venv/
+*.pyc
+__pycache__/

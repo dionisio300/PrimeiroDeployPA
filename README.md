@@ -1,6 +1,6 @@
 ## Rodar local
 python -m venv .venv
-source .venv/bin/activate  # (Linux/Mac)
-# .venv\Scripts\activate   # (Windows)
+## Ativar
+.venv\Scripts\Activate
+## Instalar dependências
 pip install -r requirements.txt
-python app.py
