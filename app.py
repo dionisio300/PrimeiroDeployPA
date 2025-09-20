@@ -1,13 +1,12 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
-@app.route('/')
-def index():
-    return render_template('index.html')
+@app.get("/")
+def home():
+    return "Hello, PythonAnywhere!"
+    # ou: return render_template("index.html")
 
-@app.route('/pagina2')
-def pagina2():
-    return render_template('pagina2.html')
-
-app.run(debug=True)
+# Só para rodar localmente:
+if __name__ == "__main__":
+    app.run()  # sem debug=True no servidor
