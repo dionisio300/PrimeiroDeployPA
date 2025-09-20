@@ -1,12 +1,15 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect, url_for
 
 app = Flask(__name__)
 
-@app.get("/")
-def home():
-    return "Hello, PythonAnywhere!"
-    # ou: return render_template("index.html")
+@app.route("/")
+def index():
+    return render_template("index.html")
 
-# Só para rodar localmente:
+@app.route("/pagina2")
+def pagina2():
+    return render_template("pagina2.html")
+
+# só para desenvolvimento local
 if __name__ == "__main__":
-    app.run()  # sem debug=True no servidor
+    app.run(debug=True)  # no PA (WSGI) isso NÃO roda
